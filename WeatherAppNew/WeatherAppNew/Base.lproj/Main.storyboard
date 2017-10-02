@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina3_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Current Weather View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="CurrentWeatherViewController" customModule="WeatherAppNew" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="KHZ-n4-D8C">
+                                <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="ZIL-Ki-gxu">
+                                <rect key="frame" x="118" y="45" width="85.5" height="158.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stockholm" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bUP-al-Awu">
+                                        <rect key="frame" x="0.0" y="0.0" width="85.5" height="24"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="60" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JXb-8R-Ai5">
+                                        <rect key="frame" x="0.0" y="74" width="85.5" height="84.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="70"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="JXb-8R-Ai5" firstAttribute="top" secondItem="ZIL-Ki-gxu" secondAttribute="top" constant="74" id="Kdo-9n-2Ld"/>
+                                </constraints>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FAHRENHEIT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2YR-zn-8Ci">
+                                <rect key="frame" x="92" y="229" width="136" height="19.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="2YR-zn-8Ci" secondAttribute="bottom" constant="231.5" id="2T7-VQ-AF4"/>
+                            <constraint firstItem="KHZ-n4-D8C" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="56y-NG-I9W"/>
+                            <constraint firstItem="KHZ-n4-D8C" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="EVw-8n-0Wr"/>
+                            <constraint firstItem="ZIL-Ki-gxu" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-115.75" id="FsM-aH-ssI"/>
+                            <constraint firstItem="KHZ-n4-D8C" firstAttribute="centerX" secondItem="ZIL-Ki-gxu" secondAttribute="centerX" id="Uhf-Et-ev7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2YR-zn-8Ci" secondAttribute="trailing" constant="92" id="ZA7-ku-kPG"/>
+                            <constraint firstItem="2YR-zn-8Ci" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="92" id="eTG-fh-Buq"/>
+                            <constraint firstItem="2YR-zn-8Ci" firstAttribute="top" secondItem="ZIL-Ki-gxu" secondAttribute="bottom" constant="25.5" id="fH7-TC-edu"/>
+                            <constraint firstItem="KHZ-n4-D8C" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="nvV-5V-stT"/>
+                            <constraint firstItem="ZIL-Ki-gxu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="thE-tw-T7f"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="bgImage" destination="KHZ-n4-D8C" id="asw-I5-mDh"/>
+                        <outlet property="cityLbl" destination="bUP-al-Awu" id="t8w-2H-fMN"/>
+                        <outlet property="tempLbl" destination="JXb-8R-Ai5" id="ObK-wX-QL1"/>
+                        <outlet property="typeTempLbl" destination="2YR-zn-8Ci" id="Htb-Fk-P3M"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.875" y="108.75"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bg" width="736" height="1308"/>
+    </resources>
+</document>
